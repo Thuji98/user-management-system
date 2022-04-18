@@ -9,7 +9,9 @@ pipeline{
 
 
         stage ('Initialize release prepare, perform') {
-            sh 'mvn initialize release:clean release:prepare release:perform'
+            steps {
+                        sh 'mvn initialize release:clean release:prepare release:perform'
+            }
         }
         stage ('Kubernetes Deployment') {
             steps {
