@@ -72,13 +72,14 @@
 					<execution>
 						<id>default</id>
 						<goals>
+							<goal>build</goal>
 							<goal>push</goal>
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
 					<repository>thuji98/user-management</repository>
-					<tag>${project.scm.tag}</tag>
+					<tag>latest</tag>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
 				<dependencies>
