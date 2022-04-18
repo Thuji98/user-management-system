@@ -24,6 +24,7 @@ pipeline{
             steps {
                  withKubeConfig([credentialsId: 'kubeconfig1']) {
                       sh 'kubectl apply -f deployment.yml'
+                      sh 'kubectl rollout restart deployment user-management -n default'
                  }
             }
         }
