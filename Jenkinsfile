@@ -13,7 +13,7 @@ pipeline{
                 sh 'git config --global user.email "thujithaponnuthurai@gmail.com"'
                 sh 'git config --global user.name "Thuji98"'
                 withCredentials([gitUsernamePassword(credentialsId: 'GIT_HUB_CREDENTIALS')]) {
-                    sh 'mvn initialize release:clean release:prepare release:perform'
+                    sh 'mvn initialize release:clean release:prepare'
                     sh 'mvn dockerfile:push'
                 }
             }
