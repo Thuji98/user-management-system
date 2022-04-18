@@ -1,15 +1,13 @@
 pipeline{
     agent any
-
     stages {
         stage ('Checkout Source') {
             steps {
                 checkout scm
             }
         }
-        stage ('Docker Build and Push') {
+        stage ('Build, Docker Push, Prepare Release') {
             steps {
-                sh 'docker version'
                 sh 'git config --global user.email "thujithaponnuthurai@gmail.com"'
                 sh 'git config --global user.name "Thuji98"'
                 withCredentials([gitUsernamePassword(credentialsId: 'GIT_HUB_CREDENTIALS')]) {
