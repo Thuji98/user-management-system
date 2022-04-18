@@ -79,7 +79,7 @@
 				</executions>
 				<configuration>
 					<repository>thuji98/user-management</repository>
-					<tag>${project.version}</tag>
+					<tag>${project.scm.tag}</tag>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
 				<dependencies>
