@@ -13,6 +13,13 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>user-management</name>
 	<description>Demo project for Jenkins</description>
+
+	<url>https://github.com/Thuji98/user-management-system/</url>
+	<scm>
+		<url>https://github.com/Thuji98/user-management-system/</url>
+		<connection>scm:git:git://github.com/Thuji98/user-management-system.git</connection>
+		<developerConnection>scm:git:https://github.com/Thuji98/user-management-system.git</developerConnection>
+	</scm>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -83,6 +90,8 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
+
 		</plugins>
 	</build>
 
