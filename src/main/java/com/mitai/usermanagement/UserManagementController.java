@@ -18,4 +18,9 @@ public class UserManagementController {
         return "Hello there1!";
     }
 
+    @GetMapping("say2")
+    public String hello2(){
+        return "Hello there2!";
+    }
+
 }
