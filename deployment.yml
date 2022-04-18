@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: user-management
-          image: thuji98/jenkins-pipeline:1.0.0
+          image: thuji98/user-management:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 9012
