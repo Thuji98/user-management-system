@@ -14,7 +14,7 @@ pipeline{
                 sh 'docker version'
                 sh 'git config --global user.email "thujithaponnuthurai@gmail.com"'
                 sh 'git config --global user.name "Thuji98"'
-                withCredentials([gitUsernamePassword(credentialsId: 'GIT_HUB_CREDENTIALS', gitToolName: 'git-tool')]) {
+                withCredentials([gitUsernamePassword(credentialsId: 'GIT_HUB_CREDENTIALS')]) {
                   sh 'mvn release:prepare -Dresume=false'
                   sh 'mvn dockerfile:push'
                 }
