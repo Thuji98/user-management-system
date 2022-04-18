@@ -10,7 +10,12 @@ pipeline{
 
         stage ('Initialize release prepare, perform') {
             steps {
-                        sh 'mvn initialize release:clean release:prepare release:perform'
+                sh 'git config --global user.email "thujithaponnuthurai@gmail.com"'
+                sh 'git config --global user.name "Thuji98"'
+                withCredentials([gitUsernamePassword(credentialsId: 'GIT_HUB_CREDENTIALS')]) {
+                    sh 'mvn initialize release:clean release:prepare release:perform'
+                    sh 'mvn dockerfile:push'
+                }
             }
         }
         stage ('Kubernetes Deployment') {
